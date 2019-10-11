@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-
-<nav>
-    <ul>
-        <li><a href="/views/about.php">Обо мне</a></li>
-        <li><a href="/views/contact.phpct.php">Связаться</a></li>
-    </ul>
-</nav>
+<?php require('partials/head.php');?>
 
 <h3>Мои задачи</h3>
 
@@ -27,6 +14,5 @@
     <?php endforeach; ?>
 </ul>
 
-</body>
-</html>
+<?php require('partials/footer.php'); ?>
 
