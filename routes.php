@@ -4,9 +4,16 @@
  * Опредеяет маршруты, которые будут добавлены
  * к экземпляру маршрутизатора
  */
-$router->define([
-    '' => 'controllers/index.php',
-    'about' => 'controllers/about.php',
-    'about/blog' => 'controllers/about-blog.php',
-    'contact' => 'controllers/contact.php',
-]);
+
+/*
+ * Get routes
+ */
+$router->get('', 'controllers/index.php');
+$router->get('about', 'controllers/about.php');
+$router->get('about/blog', 'controllers/about-blog.php');
+$router->get('contact', 'controllers/contact.php');
+
+/*
+ * Post routes
+ */
+$router->post('names', 'controllers/add-name.php');
