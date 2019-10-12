@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Точка входа
+ */
+
+require 'vendor/autoload.php';
 require 'core/bootstrap.php';
 
 /**
