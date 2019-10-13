@@ -15,3 +15,29 @@ App::bind('config', require 'config.php');
 App::bind('database', new QueryBuilder(
     Connection::make(App::get('config')['database'])
 ));
+
+/**
+ * Функция принимает коллекцию пар ключ-значние,
+ * которые обрабатываем ['name' => 'index']
+ * в $name = 'index'
+ *
+ * @param $name
+ * @param array $data
+ * @return mixed
+ */
+function view($name, $data = [])
+{
+    extract($data);
+
+    return require "views/{$name}.view.php";
+}
+
+/**
+ * Редирект в пределах приложения
+ *
+ * @param $path
+ */
+function redirect($path)
+{
+    header("Location: /{$path}");
+}
