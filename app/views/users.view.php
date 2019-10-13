@@ -8,7 +8,7 @@
 
 <h1>Напиши свое имя</h1>
 
-<form method="post" action="/users">
+<form method="post" action="../../index.php">
     <input name="name">
     <button type="submit">Отправить</button>
 </form>

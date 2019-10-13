@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Core;
 
 /**
  * Class Request отвечает за выборку о текущем запросе
@@ -21,7 +22,7 @@ class Request
      *
      * @return mixed
      */
-    public function method()
+    public static function method()
     {
         return $_SERVER['REQUEST_METHOD'];
     }

@@ -1,5 +1,9 @@
 <?php
 
+use App\Core\App;
+use App\Core\Database\QueryBuilder;
+use App\Core\Database\Connection;
+
 /**
  * Создает ключ с именем config, который имеет массив config.php
  * в качестве значения, а затем сохраняет пару ключ-значение
@@ -17,7 +21,8 @@ App::bind('database', new QueryBuilder(
 ));
 
 /**
- * Функция принимает коллекцию пар ключ-значние,
+ * Функция для подключения вида
+ * принимает коллекцию пар ключ-значние,
  * которые обрабатываем ['name' => 'index']
  * в $name = 'index'
  *
@@ -29,7 +34,7 @@ function view($name, $data = [])
 {
     extract($data);
 
-    return require "views/{$name}.view.php";
+    return require "app/views/{$name}.view.php";
 }
 
 /**
